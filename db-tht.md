@@ -35,7 +35,8 @@ Throttling ensures that a function is called at most once in a specified time pe
 
 This is useful for functions that you want to allow to run, but not too often. For example, handling scroll events, you might want to check the scroll position, but doing so on every scroll event can be a performance issue. Throttling the function allows you to check the position, say, every 100 milliseconds, regardless of how many scroll events occur.
 
-```function throttle(func, limit) {
+```javascript
+function throttle(func, limit) {
   let inThrottle;
   return function() {
     const args = arguments;
